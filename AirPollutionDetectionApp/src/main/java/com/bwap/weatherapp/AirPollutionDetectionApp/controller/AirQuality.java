@@ -17,7 +17,7 @@ public class AirQuality {
     private Response response;
     private String lat;
     private String lon;
-    private String APIkey = "cf9b2d33b663dce12a5d784c73ac3022";
+    private String APIkey = "put your api";
 
     //Getting Data from OpenWeather API
     public JSONObject getHistoricalAnalysis(){
