@@ -1,0 +1,3 @@
+# Project exclude paths
+/AirPollutionDetectionService/target/
+/proto/target/

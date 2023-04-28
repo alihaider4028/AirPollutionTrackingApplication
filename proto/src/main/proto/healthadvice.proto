@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package healthadvice;
+
+message HealthAdviceRequest {
+ string pollutant=1;
+}
+
+message HealthAdviceResponse {
+string source=1;
+string advice=2;
+}
+
+service HealthAdviceService {
+  rpc getHealthAdvice (HealthAdviceRequest) returns (HealthAdviceResponse);
+}

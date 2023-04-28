@@ -1,0 +1,22 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package="com.AirPollutionTrackingApp.pollutionIdentifier";
+service PollutionSourceIdentification {
+  rpc IdentifySourceOfPollution (stream PollutionRequest) returns (stream PollutionResponse) {}
+}
+
+message PollutionRequest {
+  string lat = 1;
+  string long=2;
+  string time = 3;
+}
+
+message PollResponse {
+   string sources = 1;
+   string value=2;
+  string message = 3;
+}
+message PollutionResponse{
+
+  repeated PollResponse resp=1;
+}

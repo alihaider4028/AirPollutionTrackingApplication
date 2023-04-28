@@ -1,0 +1,28 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package="com.AirPollutionTrackingApp.commons";
+
+enum status{
+  Good =0;
+  Fair=1;
+  Moderate=2;
+  Poor=3;
+  Very_Poor=4;
+
+}
+message components{
+
+  double co = 1;
+  double no = 2;
+  double no2 = 3;
+  double o3 = 4;
+  double so2 = 5;
+  double pm2_5 = 6;
+  double pm10 = 7;
+  double nh3 = 8;
+}
+message Request{
+  string lat=1;
+  string lon=2;
+  string time=3;
+}

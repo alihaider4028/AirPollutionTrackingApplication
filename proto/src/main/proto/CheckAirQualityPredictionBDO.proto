@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package="com.AirPollutionTrackingApp.CheckRealTimeAirQuality";
+import "commons/common.proto";
+
+message ResponseDTO{
+  double aqi=1;
+  string description=2;
+  status stat=3;
+  components components=4;
+
+}
+message CheckAirQualityPredictionResponse{
+  repeated ResponseDTO resp=1;
+}

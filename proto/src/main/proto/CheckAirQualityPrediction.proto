@@ -1,0 +1,14 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.AirPollutionTrackingApp.CheckAirQualityPredictionServices";
+import "commons/common.proto";
+import "CheckAirQualityPredictionBDO.proto";
+
+
+
+
+service CheckAirQualityPredictionService{
+
+
+  rpc CheckAirQualityPrediction(stream Request) returns(CheckAirQualityPredictionResponse);
+}
